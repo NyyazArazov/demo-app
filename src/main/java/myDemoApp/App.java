@@ -8,6 +8,7 @@ package myDemoApp;
   import java.util.HashMap;
   import java.util.Map;
 
+
   import spark.ModelAndView;
   import spark.template.mustache.MustacheTemplateEngine;
 
@@ -17,7 +18,7 @@ package myDemoApp;
         return "Hello world.";
     }
 
-    public static boolean search(ArrayList<Integer> array, int e) {
+     public static boolean search(ArrayList<Integer> array, int e) {
       System.out.println("inside search");
       if (array == null) return false;
 
@@ -27,13 +28,7 @@ package myDemoApp;
       return false;
     }
 
-    public static void main(String[] args) {
-        Logger logger = LogManager.getLogger(App.class);
-
-        int port = Integer.parseInt(System.getenv("PORT"));
-        port(port);
-        logger.error("Current port number:" + port);
-
+    public static void main(String[] argos) {
         port(getHerokuAssignedPort());
 
         get("/", (req, res) -> "Hello, World");
