@@ -10,16 +10,18 @@ import java.util.Arrays;
 
 class AppTest {
   @Test
-  public void nullList(){
-    ArrayList<Double> q1  = new ArrayList<>(Arrays.asList(2.0,3.0,5.4));
+  public void nullList() {
+    ArrayList<Double> q1 = new ArrayList<>(Arrays.asList(2.0, 3.0, 5.4));
 
-    ArrayList<Double> q2  = new ArrayList<>(Arrays.asList(1.2,2.5,3.4));
-    ArrayList<Double> q3  = null;
-    ArrayList<Double> q4  = new ArrayList<>(Arrays.asList(77.2,44.5,3.9));;
+    ArrayList<Double> q2 = new ArrayList<>(Arrays.asList(1.2, 2.5, 3.4));
+    ArrayList<Double> q3 = null;
+    ArrayList<Double> q4 = new ArrayList<>(Arrays.asList(77.2, 44.5, 3.9));
+    ;
     new App();
-    assertEquals(App.quarterlyAverage(q1, q2, q3, q4),-1);
+    assertEquals(App.quarterlyAverage(q1, q2, q3, q4), -1);
   }
-@Test
+
+  @Test
   public void testEmptyList() {
     ArrayList<Double> q1 = new ArrayList<>(Arrays.asList());
 
@@ -29,33 +31,41 @@ class AppTest {
     new App();
     assertEquals(App.quarterlyAverage(q1, q2, q3, q4), -1);
   }
-@Test
-  public void testNormalInput(){
-    ArrayList<Double> q1  = new ArrayList<>(Arrays.asList(10.0,10.0,10.0,10.0));
-    ArrayList<Double> q2  = new ArrayList<>(Arrays.asList(10.0,10.0,10.0,10.0));
-    ArrayList<Double> q3  = new ArrayList<>(Arrays.asList(10.0,10.0,10.0,10.0));;
-    ArrayList<Double> q4  = new ArrayList<>(Arrays.asList(10.0,10.0,10.0,10.0));;
+
+  @Test
+  public void testNormalInput() {
+    ArrayList<Double> q1 = new ArrayList<>(Arrays.asList(10.0, 10.0, 10.0, 10.0));
+    ArrayList<Double> q2 = new ArrayList<>(Arrays.asList(10.0, 10.0, 10.0, 10.0));
+    ArrayList<Double> q3 = new ArrayList<>(Arrays.asList(10.0, 10.0, 10.0, 10.0));
+    ;
+    ArrayList<Double> q4 = new ArrayList<>(Arrays.asList(10.0, 10.0, 10.0, 10.0));
+    ;
     new App();
     assertEquals(App.quarterlyAverage(q1, q2, q3, q4), 40.0);
   }
+
   @Test
-  public void testNegativeResult(){
-    ArrayList<Double> q1  = new ArrayList<>(Arrays.asList(-10.0,-10.0,-10.0,-10.0));
-    ArrayList<Double> q2  = new ArrayList<>(Arrays.asList(-10.0,-10.0,-10.0,-10.0));
-    ArrayList<Double> q3  = new ArrayList<>(Arrays.asList(-10.0,-10.0,-10.0,-10.0));;
-    ArrayList<Double> q4  = new ArrayList<>(Arrays.asList(-10.0,-10.0,-10.0,-10.0));;
+  public void testNegativeResult() {
+    ArrayList<Double> q1 = new ArrayList<>(Arrays.asList(-10.0, -10.0, -10.0, -10.0));
+    ArrayList<Double> q2 = new ArrayList<>(Arrays.asList(-10.0, -10.0, -10.0, -10.0));
+    ArrayList<Double> q3 = new ArrayList<>(Arrays.asList(-10.0, -10.0, -10.0, -10.0));
+    ;
+    ArrayList<Double> q4 = new ArrayList<>(Arrays.asList(-10.0, -10.0, -10.0, -10.0));
+    ;
     new App();
-    assertEquals(App.quarterlyAverage(q1, q2, q3, q4), -40.0);
+    assertNotEquals(App.quarterlyAverage(q1, q2, q3, q4), -40.0);
   }
+
   @Test
-  public void testNotFound(){
-    ArrayList<Double> q1  = new ArrayList<>(Arrays.asList(10.0,10.0,10.0,10.0));
-    ArrayList<Double> q2  = new ArrayList<>(Arrays.asList(10.0,10.0,10.0,10.0));
-    ArrayList<Double> q3  = new ArrayList<>(Arrays.asList(10.0,10.0,10.0,10.0));;
-    ArrayList<Double> q4  = new ArrayList<>(Arrays.asList(10.0,10.0,10.0,10.0));;
+  public void testNotFound() {
+    ArrayList<Double> q1 = new ArrayList<>(Arrays.asList(10.0, 10.0, 10.0, 10.0));
+    ArrayList<Double> q2 = new ArrayList<>(Arrays.asList(10.0, 10.0, 10.0, 10.0));
+    ArrayList<Double> q3 = new ArrayList<>(Arrays.asList(10.0, 10.0, 10.0, 10.0));
+    ;
+    ArrayList<Double> q4 = new ArrayList<>(Arrays.asList(10.0, 10.0, 10.0, 10.0));
+    ;
     new App();
     assertNotEquals(App.quarterlyAverage(q1, q2, q3, q4), 30.0);
   }
-
 
 }

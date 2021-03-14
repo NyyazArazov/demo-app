@@ -30,7 +30,7 @@ public class App {
         if (q1 == null || q2 == null || q3 == null || q4 == null) {
             return -1;
         }
-        if(q1.isEmpty()|| q2.isEmpty()|| q3.isEmpty()|| q4.isEmpty()){
+        if (q1.isEmpty() || q2.isEmpty() || q3.isEmpty() || q4.isEmpty()) {
             return -1;
         }
         double average = 0;
@@ -46,7 +46,7 @@ public class App {
         for (int i = 0; i < q4.size(); i++) {
             average += q4.get(i);
         }
-        if(average < 0){
+        if (average < 0) {
             return -1;
         }
         return average / 4;
