@@ -1,13 +1,18 @@
 
-<title>My application deployed automatically!</title>
-  <h1>Hello, World!</h1>
-    Result is {{result}}
+<title>Income Analyzer</title>
+  <h1>Quarterly Income Average</h1>
+    Your Company's yearly income average is {{result}}
 
 
   <form action="compute" method="post">
-        <textarea name="input1" rows="10" cols="30"></textarea>
-        <textarea name="input2" rows="10" cols="30"></textarea>
+        <textarea placeholder="Enter revenue from Q1 :" name="input1" rows="10" cols="30"></textarea>
+        <textarea placeholder="Enter revenue from Q2 :" name="input2" rows="10" cols="30"></textarea>
+        <textarea placeholder="Enter revenue from Q3 :" name="input3" rows="10" cols="30"></textarea>
+        <textarea placeholder="Enter revenue from Q4 :" name="input4" rows="10" cols="30"></textarea>
         <br>
         <input type="submit">
   </form>
+    <p style="color:green; font-size:30px;"> How to compute your Quarterly Income? </p>
+    <p>Type double or integer type numbers otherwise application will give an error.</p> <br>
+    <p>After typing all inputs application will give you average income for one year.</p> <br>
 
