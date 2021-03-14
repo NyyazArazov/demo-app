@@ -53,7 +53,7 @@ class AppTest {
     ArrayList<Double> q4 = new ArrayList<>(Arrays.asList(-10.0, -10.0, -10.0, -10.0));
     ;
     new App();
-    assertNotEquals(App.quarterlyAverage(q1, q2, q3, q4), -40.0);
+    assertNotEquals(App.quarterlyAverage(q1, q2, q3, q4), 40.0);
   }
 
   @Test
