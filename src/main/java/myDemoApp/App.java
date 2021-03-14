@@ -31,12 +31,10 @@ package myDemoApp;
     public static void main(String[] argos) {
         port(getHerokuAssignedPort());
 
-        get("/", (req, res) -> "Hello, World");
+        get("/", (req, res) -> "Quarterly Income Analyzer");
 
         post("/compute", (req, res) -> {
-          //System.out.println(req.queryParams("input1"));
-          //System.out.println(req.queryParams("input2"));
-
+         
           String input1 = req.queryParams("input1");
           java.util.Scanner sc1 = new java.util.Scanner(input1);
           sc1.useDelimiter("[;\r\n]+");
